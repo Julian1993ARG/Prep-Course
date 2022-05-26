@@ -10,11 +10,11 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  var object ={};
+  var array = [];
   for(var clave in objeto){
-    object += objeto[clave]
+    array.push([clave, objeto[clave]])
   }
-  return object
+  return array
 }
 
 
@@ -23,6 +23,15 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  let object ={}
+  for(var i =0; i<string.length;i++){
+    if(object.hasOwnProperty(string[i])){
+      object[i]++
+    }else {
+      object
+    }
+  }
+  return object
 }
 
 
