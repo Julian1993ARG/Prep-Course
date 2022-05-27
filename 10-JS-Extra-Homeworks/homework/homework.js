@@ -26,9 +26,9 @@ function numberOfCharacters(string) {
   let object ={}
   for(var i =0; i<string.length;i++){
     if(object.hasOwnProperty(string[i])){
-      object[i]++
+      object[string[i]]++
     }else {
-      object
+      object[string[i]]=1
     }
   }
   return object
@@ -40,6 +40,16 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  let mayus="";
+  let minusculas="";
+  for(let i =0;i<s.length;i++){
+    if(s[i]==s[i].toUpperCase()){
+      mayus +=s[i]
+    }else{
+      minusculas +=s[i]
+    }
+  }
+  return mayus+minusculas
 }
 
 
