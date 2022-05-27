@@ -59,6 +59,15 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var text =str.split(" ")
+  var textoInvertido=[]
+  text.forEach(element => {
+    textoInvertido.push(element.split("").reverse().join(""))
+  });
+  // for(let i=0;i<text.length;i++){
+  //   textoInvertido.push(text[i].split("").reverse().join("")) 
+  // }
+  return textoInvertido.join(" ")
 } 
 
 
